@@ -10,3 +10,6 @@ Outros comandos do terminal
 - cd <nome da pasta> (entrar nas pastas referentes)
 - ls (lista os arquivos)
 - cd .. (volta uma pasta)
+
+
+alteração no código
