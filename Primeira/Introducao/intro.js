@@ -1,51 +1,38 @@
-console.log("Ola pessoas")
+console.log("ola")
+console.log("André", "André", "André", "André")
 
 // VARIAVEIS
-// responsaveis por guardar dados na memoria, evitam repetição
-var nome = "lucas"
+// responsaveis por guardar dados na memória do computador, evitam repetição
 
+var nome = "André"
+nome = "Lucas"
+let sobrenome = "Silva"
+const verdadeiro = false
+const idade = 18
+var lanchonete = "Mc´Donald"
 
-console.log(nome)
+// tipos dos dados
+// string, number, boolean
 
-let idade = 18
+console.log(nome, nome, nome, nome)
+console.log(2)
+console.log(lanchonete, typeof lanchonete)
+console.log(idade, typeof idade)
+console.log(verdadeiro, typeof verdadeiro)
 
-const temCabeloPreto = true
+//concatenação
+console.log(nome + " " + sobrenome)
 
-console.log(temCabeloPreto)
-
-// string, boolean, number
-
-console.log(typeof nome, typeof idade, typeof temCabeloPreto)
-
+//conta com variavel
 var preco = 25
-var quantidade = 5
+var quantidade = 3
 var total = preco * quantidade
 
-console.log(total)
+console.log(total, "TOTAL DA CONTA COM VARIAVEL")
 
-
-var sobrenome, cidade, ano
-sobrenome = "Pereira"
+// virgula para separar variaveis declaradas ao mesmo tempo
+var loja = "Tunel do Rock", cidade, numero;
 cidade = "Curitiba"
-ano = 2025
-console.log(nome, sobrenome, cidade)
-console.log(nome, sobrenome + " de:" + " " + cidade + " no ano de - " + ano)
-
-// nomes podem iniciar com $, _ ou letras
-var Nome = "andre"
-var nome = "josias"
-var lalala
-//concatenação
-lalala = Nome + " " + nome
-
-//template string
-lalala = `${Nome} ${nome}`
-console.log(lalala)
-
-var time = "vasco"
-var time = "flamengo"
-console.log(time, "AQUI É MEU TIME")
-
-
-
+numero = 339
+console.log(loja, cidade, numero)
 

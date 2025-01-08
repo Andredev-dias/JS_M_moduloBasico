@@ -1,29 +1,28 @@
-const primeiro = 10
-const segundo = 2
-const terceiro = 5
+// alert("opaaaaa")
+var numero1 = 30
+var numero2 = 10
+const numero3 = 99
 
-function soma(){
-    var a = 5
+function calcular(){
+    var a = 1
     var b = 2
-    var res = a + b
-    printSomething()
+    var resposta = a + b
+    mostrarTexto()
+    return resposta
+}
+
+function mostrarTexto(){
+    console.log("texto")
+}
+
+console.log(calcular())
+
+function calcularPorParametro(n1, n2, n3){
+    var res = n1 + n2 + n3
     return res
 }
 
-function printSomething(){
-    console.log("printando um texto qualquer")
-}
+// console.log(calcularPorParametro(numero1,numero2,numero3))
 
-function somaPorParametros(n1, batata, n3, n4, n5){
-    return n1 + batata + n3 + n4 + n5
-}
-
-const somaPorParametro = (n1, n2, n3,n4, n5) => n1 + n2 + n3 + n4 + n5
-
-console.log(somaPorParametros(primeiro, segundo, terceiro, 8, 9))
-
-const printSome = () => console.log("printando blablabla")
-
-console.log(somaPorParametro(1,1,1,1,1))
-
-// NaN - not a number
+NaN
+//Not a Number

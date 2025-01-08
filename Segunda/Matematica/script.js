@@ -3,78 +3,68 @@ const n1 = 5, n2 = 2
 function somar(numero1, numero2){
     return numero1 + numero2
 }
-console.log(somar(n1, n2), "RESULTADO DA SOMA")
+console.log(somar(n1, n2), "Resultado na soma")
 
-function sub(num1, num2){
-    return num1 - num2
+function sub(numero1, numero2){
+    return numero1 - numero2
 }
-console.log(sub(n1, n2), "RESULTADO DA SUBTRAÇÃO")
+console.log(sub(10, 9), "Resultado da Subtração")
 
 
-// const multi = (n1, n2) => {
-//     return n1 * n2
+// const multi = (numero1, numero2) => {
+//     return numero1 * numero2
 // }
 
-const multi = (n1, n2) => n1 * n2
-console.log(multi(n1, n2), "RESULTADO DA MULTIPLICAÇÃO")
+const multi = (numero1, numero2) => numero1 * numero2
+console.log(multi(n1, n2), "Resultado da Multiplicação")
 
-// function div(n1, n2){
-//     if(n2 === 0){
-//         return "Não é possível divisão por 0"
-//     } else {
-//         return n1 / n2
-//     }
-// }
+const divisaoComCondicionalTernaria = (numero1, numero2) => numero2 !== 0 ? numero1 / numero2 : "Nao pode ser 0"
 
-// function div(n1, n2){
-//     if(n2 !== 0){
-//         return n1 / n2
-//     } else {
-//         return "Não é possível divisão por 0"
-//     }
-// }
-
-const div = (n1, n2) => n2 !== 0 ? n1 / n2 : "Não é possível dividir por 0"
-console.log(div(n1, n2), "RESULTADO DA DIVISÃO")
-
-function calcular(numero1, numero2, operador){
-    if(operador === "+"){
-        return numero1 + numero2
-    } else if(operador === "-") {
-        return numero1 - numero2
-    } else if(operador === "*"){
-        return numero1 * numero2
-    } else if(operador === "/"){
-        if(numero2 !== 0){
-            return numero1 / numero2
-        } else {
-            return "Divisão por 0 não pode ser efetuada"
-        }
+function div(numero1, numero2){
+    if(numero2 !== 0){
+        return numero1 / numero2
     } else {
-        return "Operador Inválido"
+        return "Não pode ser 0"
     }
+    // if(numero2 === 0){
+    //     return "não pode ser 0"
+    // } else {
+    //     return numero1 / numero2
+    // }
 }
-console.log(calcular(5,1,"/"), "RESULTADO DO CALCULO DESEJADO")
+console.log(div(n1, n2), "Resultado da Divisão")
+
+function calcular(n1, n2, operador){
+    if(operador === "+"){
+        return n1 + n2
+    } else if(operador === "-") {
+        return n1 - n2
+    } else if(operador === "*") {
+        return n1 * n2
+    } else if(operador === "/") {
+      return n2 === 0 ? "Não pode ser 0" : parseFloat((n1 / n2).toFixed(1))
+    } else {
+        return "operador inválido"
+    }
+} 
+console.log(calcular(2, 3, "/"))
 
 
-function calcularComSwitchCase(n1, n2, op){
+function calcularComSwitchCase(x1, x2, op){
     switch (op) {
         case "+":
-            return n1 + n2
+            return x1+x2
         case "-":
-            return n1 - n2
+            return x1-x2
         case "x":
-            return n1 * n2
+            return x1*x2
         case "%":
-            return n2 === 0 ? "não posso dividir por 0" : parseFloat((n1 / n2).toFixed(1))
+            return x2 === 0 ? "Não pode ser 0" : parseFloat((x1 / x2).toFixed(1))
         default:
-            return "Operador Inválido"
+            return "Operador inválido"
     }
 }
-
-console.log(calcularComSwitchCase(2, 3, "%"))
-
-
+console.log(calcularComSwitchCase(n1, n2, "x"), calcularComSwitchCase(n1, n2, "+"), calcularComSwitchCase(n1, n2, "-"), calcularComSwitchCase(n1, n2, "%"))
 
 
 
