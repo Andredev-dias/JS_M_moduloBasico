@@ -1,28 +1,29 @@
-// alert("opaaaaa")
-var numero1 = 30
-var numero2 = 10
-const numero3 = 99
+const primeiro = 10
+const segundo = 2
+const terceiro = 5
 
-function calcular(){
-    var a = 1
+function soma(){
+    var a = 5
     var b = 2
-    var resposta = a + b
-    mostrarTexto()
-    return resposta
-}
-
-function mostrarTexto(){
-    console.log("texto")
-}
-
-console.log(calcular())
-
-function calcularPorParametro(n1, n2, n3){
-    var res = n1 + n2 + n3
+    var res = a + b
+    printSomething()
     return res
 }
 
-// console.log(calcularPorParametro(numero1,numero2,numero3))
+function printSomething(){
+    console.log("printando um texto qualquer")
+}
 
-NaN
-//Not a Number
+function somaPorParametros(n1, batata, n3, n4, n5){
+    return n1 + batata + n3 + n4 + n5
+}
+
+const somaPorParametro = (n1, n2, n3,n4, n5) => n1 + n2 + n3 + n4 + n5
+
+console.log(somaPorParametros(primeiro, segundo, terceiro, 8, 9))
+
+const printSome = () => console.log("printando blablabla")
+
+console.log(somaPorParametro(1,1,1,1,1))
+
+// NaN - not a number
