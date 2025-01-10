@@ -25,7 +25,17 @@ function calc() {
         resultado = "Operador invalido"
         break;
     }
-    document.getElementById("resultado").textContent = format(resultado)
+    if(resultado !== "Erro na conta por 0"){
+      var a = document.getElementById("resultado")
+      a.textContent = format(resultado)
+      a.style.fontSize = "48px"
+    }else{
+      var a = document.getElementById("resultado")
+      a.textContent = resultado
+      a.style.fontSize = "16px"
+      a.style.textAlign = "center"
+
+    }
   }
 
   const format = (num) => Number.isInteger(num) ?  num  : num.toFixed(2);

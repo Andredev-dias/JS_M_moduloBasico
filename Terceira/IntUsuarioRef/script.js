@@ -32,13 +32,21 @@ function calcular(id1, id2, respId, operador) {
     //   return (document.getElementById(respId).textContent =
     //     resultado.toFixed(2));
     // }
-    document.getElementById(respId).textContent = formatNumber(resultado);
+
+    
+    // if(resultado !== "Erro: divisao por 0"){
+      document.getElementById(respId).textContent = formatNumber(resultado);
+    // }else{
+    //   document.getElementById(respId).textContent = resultado;
+    // }
   }
 
     function formatNumber(num) {
       if (Number.isInteger(num)) {
         return num;
+      } else if(num !== "Erro: divisao por 0"){
+        return num.toFixed(2)
       } else {
-        return num.toFixed(2);
+        return num
       }
     }
